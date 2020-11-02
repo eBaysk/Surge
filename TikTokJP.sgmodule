@@ -1,0 +1,13 @@
+#!name=Tartarus iOS Tiktok Module
+#!desc=iOS 🔓解锁 模块配置
+#!system=ios
+
+[URL Rewrite]
+^https://api[\w-]*?.tiktokv.com/aweme/v\d/policy/notice/? - reject
+
+(?<=_region=)CN(?=&) JP 307
+(?<=&app_version=)1[6-9]..(?=.?.?&) 100. 307
+(?<=\?version_code=)1[6-9]..(?=.?.?&) 100. 307
+
+[MITM]
+hostname = %INSERT% *.tiktokv.com, *.byteoversea.com, *.musical.ly, *.snssdk.com
