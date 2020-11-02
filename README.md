@@ -7,3 +7,5 @@
 3.  Sub-Store([Surge.sgmodule](https://raw.githubusercontent.com/Peng-YM/Sub-Store/master/config/Surge.sgmodule))
 
 3.   Boxjs([boxjs.rewrite.surge.tf.sgmodule](https://gitee.com/chavyleung/scripts/raw/master/box/rewrite/boxjs.rewrite.surge.tf.sgmodule))
+
+3.   JD Task([jingdong.sgmodule](https://raw.githubusercontent.com/chiupam/Proxy/master/Surge/jingdong.sgmodule))
