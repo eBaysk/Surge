@@ -1,5 +1,5 @@
 #!name=Tartarus iOS Script Module
-#!desc=Bosjs Sub-Store 模块配置
+#!desc=Boxjs Sub-Store 模块配置
 [MITM]
 hostname=%APPEND% sub.store
 [Script]
