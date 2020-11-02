@@ -1,5 +1,5 @@
 #!name=Tartarus iOS Task Module
-#!desc=iOS Task 模块配置
+#!desc=iOS Tasks 模块配置
 #!tag = type=cron, cronexp=cronexample, wake-system=1, timeout=600, script-path=javescript
 #!GitHub:https://github.com/chiupam/Proxy/blob/master/Surge/jingdong.sgmodule
 #!Raw:https://raw.githubusercontent.com/chiupam/Proxy/master/Surge/jingdong.sgmodule
