@@ -4,13 +4,12 @@
 #!GitHub:https://github.com/chiupam/Proxy/blob/master/Surge/jingdong.sgmodule
 #!Raw:https://raw.githubusercontent.com/chiupam/Proxy/master/Surge/jingdong.sgmodule
 [Script]
-# > 获取京东Cookie
-获取京东Cookie = type=http-request, pattern=https:\/\/api\.m\.jd\.com\/client\.action.*functionId=signBean, script-path=https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js
 # > 京东系列
-# >>> 取消关注 {23:59}
+
+获取京东Cookie = type=http-request, pattern=https:\/\/api\.m\.jd\.com\/client\.action.*functionId=signBean, script-path=https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js
+
 取消关注 = type=cron, cronexp=0 58 23 * * *, wake-system=1, timeout=600, script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_unsubscribe.js
 
-# >>> 京东京豆 {*/12:01} (双号执行时长大约180s左右)
 京豆 = type=cron, cronexp=0 12 0 * * *, wake-system=1, timeout=600, script-path=https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js
 
 惊喜 = type=cron, cronexp=0 16 0 * * *, wake-system=1, timeout=600, script-path=https://raw.githubusercontent.com/Sunert/Scripts/master/Task/jingxi.js
@@ -26,6 +25,12 @@
 摇京豆 = type=cron,cronexp=30 13 0 * * *, wake-system=1, timeout=600, script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_club_lottery.js
 
 全民开红包 = type=cron,cronexp=0 18 0 * * *, wake-system=1, timeout=600, script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_redPacket.js
+
+东东农场 = type=cron, cronexp=0 0 6-18/6 * * *, wake-system=1, timeout=600, script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_fruit.js
+
+种豆得豆————凌晨时段 type=cron, cronexp=0 19 0 * * *, wake-system=1, timeout=600, script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_plantBean.js
+
+种豆得豆————其余时段 = type=cron, cronexp=0 0 7-21/2 * * *, wake-system=1, timeout=600, script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_plantBean.js
 
 # > 游戏系列
 # >>> 兑换类
@@ -49,19 +54,12 @@
 宠汪汪————第五次喂食 = type=cron, cronexp=0 1 15 * * *, wake-system=1, timeout=600, script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_joy_feedPets.js
 宠汪汪————第六次喂食 = type=cron, cronexp=0 4 18 * * *, wake-system=1, timeout=600, script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_joy_feedPets.js
 宠汪汪————第七次喂食 = type=cron, cronexp=0 7 21 * * *, wake-system=1, timeout=600, script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_joy_feedPets.js
-# >>> 东东农场 {06:00 12:00 18:00}
-东东农场 = type=cron, cronexp=0 0 6-18/6 * * *, wake-system=1, timeout=600, script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_fruit.js
 # >>> 东东萌宠系列
 # >>>>> 每日首次,避免东东农场未执行完成 {06:08} 
 东东萌宠————每日首次 = type=cron, cronexp=0 8 6 * * *, wake-system=1, timeout=600, script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_pet.js
 # >>>>> 其余时段耗时较短 {12:04 18:04}
 东东萌宠————其余时段 = type=cron, cronexp=0 4 12-18/6 * * *, wake-system=1, timeout=600, script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_pet.js
-# >>> 种豆得豆系列
-# >>>>> 凌晨时段可以领取一瓶营养液 {00:07}
-种豆得豆————凌晨时段 type=cron, cronexp=0 19 0 * * *, wake-system=1, timeout=600, script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_plantBean.js
-# >>>>> 其余时段 {7-12/2:00}
-种豆得豆————其余时段 = type=cron, cronexp=0 0 7-21/2 * * *, wake-system=1, timeout=600, script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_plantBean.js
-# >>> 京小超系列
+#东东超市
 # >>>>> 凌晨时段可能上架蓝币货物 {00:06:12}
 京小超————每日首次 = type=cron, cronexp=12 6 0 * * *, wake-system=1, timeout=600, script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_superMarket.js
 # >>>>> 其余时段 {09:06:12 17:06:12}
