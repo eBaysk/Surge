@@ -9,8 +9,24 @@
 # > 京东系列
 # >>> 取消关注 {23:59}
 取消关注 = type=cron, cronexp=0 58 23 * * *, wake-system=1, timeout=600, script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_unsubscribe.js
+
 # >>> 京东京豆 {*/12:01} (双号执行时长大约180s左右)
 京豆 = type=cron, cronexp=0 12 0 * * *, wake-system=1, timeout=600, script-path=https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js
+
+惊喜 = type=cron, cronexp=0 16 0 * * *, wake-system=1, timeout=600, script-path=https://raw.githubusercontent.com/Sunert/Scripts/master/Task/jingxi.js
+
+京东时光机 = type=cron, cronexp=0 17 0 * * *, wake-system=1, timeout=600, script-path=https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/scripts/jd/jd_timeMachine.js
+
+进店领豆 = type=cron,cronexp=0 18 0 * * *, wake-system=1, timeout=600, script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_shop.js
+
+天天加速 = type=cron, cronexp=0 5 1-23/2 * * *, wake-system=1, timeout=600, script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_speed.js
+
+摇钱树 = type=cron, cronexp=0 10 2-18/8 * * *, wake-system=1, timeout=600, script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_moneyTree.js
+
+摇京豆 = type=cron,cronexp=30 13 0 * * *, wake-system=1, timeout=600, script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_club_lottery.js
+
+全民开红包 = type=cron,cronexp=0 18 0 * * *, wake-system=1, timeout=600, script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_redPacket.js
+
 # > 游戏系列
 # >>> 兑换类
 # >>>>> 宠汪汪兑换京豆 {08:00 16:00}
@@ -51,15 +67,6 @@
 # >>>>> 其余时段 {09:06:12 17:06:12}
 京小超————其余时段 = type=cron, cronexp=12 6 9-17/8 * * *, wake-system=1, timeout=600, script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_superMarket.js
 # >>> 摇钱树 {02:10 10:10 18:10} (Lv.15+)
-摇钱树 = type=cron, cronexp=0 10 2-18/8 * * *, wake-system=1, timeout=600, script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_moneyTree.js
-# >>> 摇京豆 {00:08:30}
-摇京豆 = type=cron,cronexp=30 8 0 * * *, wake-system=1, timeout=600, script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_club_lottery.js
-# >>> 全民开红包 {00:09}
-全民开红包 = type=cron,cronexp=0 9 0 * * *, wake-system=1, timeout=600, script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_redPacket.js
-# >>> 进店领豆 {00:09:30}
-进店领豆 = type=cron,cronexp=30 9 0 * * *, wake-system=1, timeout=600, script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_shop.js
-# >>> 天天加速(1-23/2:05)
-天天加速 = type=cron, cronexp=0 5 1-23/2 * * *, wake-system=1, timeout=600, script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_speed.js
 # >>> 手狂欢城
 京东手机狂欢城 = type=cron,cronexp=30 10 */6 * * *, wake-system=1, timeout=600, script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_818.js
 # >>> 星推官
