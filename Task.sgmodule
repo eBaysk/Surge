@@ -32,21 +32,9 @@
 
 种豆得豆————其余时段 = type=cron, cronexp=0 0 7-21/2 * * *, wake-system=1, timeout=600, script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_plantBean.js
 
-# > 游戏系列
-# >>> 兑换类
-# >>>>> 宠汪汪兑换京豆 {08:00 16:00}
-宠汪汪————兑换 = type=cron, cronexp=0 0 8-16/8 * * *, wake-system=1, timeout=600, script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_joy_reward.js
-# >>> 京小超兑换京东
-# >>>>> 第一次执行,大概率失败 {00：00}
-京小超————第一次 = type=cron, cronexp=0 9 0 * * *,wake-system=1,timeout=600,script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_blueCoin.js
-# >>>>> 第二次执行,可以执行完毕 {00:07}
-京小超————第二次 = type=cron, cronexp=0 15 0 * * *,wake-system=1,timeout=600,script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_blueCoin.js
 # >>> 宠汪汪系列
-# >>>>> 辅助脚本
-聚宝盆辅助 = type=http-response, pattern=^https:\/\/jdjoy\.jd\.com\/pet\/getPetTreasureBox|^https:\/\/draw\.jdfcloud\.com\/\/pet\/getPetTreasureBox, requires-body=1, max-size=0, script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_petTreasureBox.js
-# >>>>> 偷粮 {00:04 06:04}
+宠汪汪————兑换 = type=cron, cronexp=0 0 8-16/8 * * *, wake-system=1, timeout=600, script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_joy_reward.js
 宠汪汪————偷粮 = type=cron,cronexp=0 4 1-7/6 * * *, wake-system=1, timeout=600, script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_joy_steal.js
-# >>>>> 喂食 (不追求每日"8"次全部成功,单独分"7"次执行,以确保成功喂食)
 宠汪汪————首次喂食 = type=cron, cronexp=0 18 0 * * *, wake-system=1, timeout=600, script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_joy.js
 宠汪汪————第二次喂食 = type=cron, cronexp=0 51 5 * * *, wake-system=1, timeout=600, script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_joy_feedPets.js
 宠汪汪————第三次喂食 = type=cron, cronexp=0 54 8 * * *, wake-system=1, timeout=600, script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_joy_feedPets.js
@@ -59,7 +47,9 @@
 东东萌宠————每日首次 = type=cron, cronexp=0 8 6 * * *, wake-system=1, timeout=600, script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_pet.js
 # >>>>> 其余时段耗时较短 {12:04 18:04}
 东东萌宠————其余时段 = type=cron, cronexp=0 4 12-18/6 * * *, wake-system=1, timeout=600, script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_pet.js
-#东东超市
+# >>> 东东超市
+京小超————第一次 = type=cron, cronexp=0 0 0 * * *,wake-system=1,timeout=600,script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_blueCoin.js
+京小超————第二次 = type=cron, cronexp=0 15 0 * * *,wake-system=1,timeout=600,script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_blueCoin.js
 # >>>>> 凌晨时段可能上架蓝币货物 {00:06:12}
 京小超————每日首次 = type=cron, cronexp=12 6 0 * * *, wake-system=1, timeout=600, script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_superMarket.js
 # >>>>> 其余时段 {09:06:12 17:06:12}
